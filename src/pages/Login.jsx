@@ -19,7 +19,7 @@ const Login = () => {
       setError(false)
       try {
         const phoneNumber='+'+phone
-        await axios.post("http://localhost:3500/api/send-otp",{phoneNumber})
+        await axios.post("https://admitkard-assignment.onrender.com/api/send-otp",{phoneNumber})
         navigate("/otp-verification",{state:phone})
   
        } catch (error) {

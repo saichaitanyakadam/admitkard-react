@@ -31,7 +31,7 @@ const Otp = () => {
         setCountdown(60)
         try {
             const phoneNumber="+"+phoneNum
-            await axios.post("http://localhost:3500/api/send-otp",{phoneNumber})
+            await axios.post("https://admitkard-assignment.onrender.com/api/send-otp",{phoneNumber})
         } catch (error) {
             
         }
@@ -42,7 +42,7 @@ const Otp = () => {
     const handleClick=async()=>{
         try {
             const phoneNumber="+"+phoneNum
-            await axios.post("http://localhost:3500/api/verify-otp",{phoneNumber,otp})
+            await axios.post("https://admitkard-assignment.onrender.com/api/verify-otp",{phoneNumber,otp})
             setErrorMsg("")
             navigate("/success")
         } catch (err) {
